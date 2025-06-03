@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Registration Form</title>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIN-t8hrh9ZGFlbXSt8YwvFG_HW5NqHPdJA&s');
+      background-repeat: no-repeat;
+      background-position: top right;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    img.product-icon {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 100px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .buttons input {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons input[type="reset"] {
+      background-color: #f44336;
+    }
+
+    table {
+      width: 90%;
+      margin: 40px auto;
+      border-collapse: collapse;
+    }
+
+    caption {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #e0e0e0;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tfoot td {
+      font-style: italic;
+      background-color: #ddd;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Register Your Product</h1>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXHVJjX3q1sfDIGFbl8loZRQFnO-ekCLV6sA&s" alt="Product Icon" class="product-icon" />
+
+  <form action="/submit_product_registration" method="POST">
+    <fieldset>
+      <legend>Product Details</legend>
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" placeholder="Enter product name" required />
+
+      <label for="category">Product Category:</label>
+      <select id="category" name="category">
+        <option value="electronics">Electronics</option>
+        <option value="home">Home Appliances</option>
+        <option value="clothing">Clothing</option>
+        <option value="books">Books</option>
+      </select>
+
+      <label for="purchaseDate">Purchase Date:</label>
+      <input type="date" id="purchaseDate" name="purchaseDate" />
+
+      <label for="serialNumber">Serial Number:</label>
+      <input type="text" id="serialNumber" name="serialNumber" placeholder="e.g., SN123456789" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Information</legend>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label>
+        <input type="checkbox" name="warranty" value="yes" />
+        Opt-in for extended warranty
+      </label>
+    </fieldset>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional information..."></textarea>
+
+    <div class="buttons">
+      <input type="submit" value="Register Product" />
+      <input type="reset" value="Reset" />
+    </div>
+  </form>
+
+  <table>
+    <caption>Product Compatibility</caption>
+    <thead>
+      <tr>
+        <th>Device Type</th>
+        <th>Operating System</th>
+        <th>Compatible Versions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Laptop</td>
+        <td>Windows</td>
+        <td>10, 11</td>
+      </tr>
+      <tr>
+        <td>Smartphone</td>
+        <td>Android</td>
+        <td>12, 13, 14</td>
+      </tr>
+      <tr>
+        <td>Tablet</td>
+        <td>iOS</td>
+        <td>15, 16</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"></td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>

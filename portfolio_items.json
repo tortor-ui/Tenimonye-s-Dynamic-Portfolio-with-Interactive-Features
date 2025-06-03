@@ -1,0 +1,17 @@
+[
+    {
+      "name": "My First HTML Page",
+      "description": "A simple static page demonstrating basic HTML structure.",
+      "link": "../profile_web.html"
+    },
+    {
+      "name": "CSS Styling Practice",
+      "description": "Experimenting with layout, color, and text styles.",
+      "link": "#"
+    },
+    {
+      "name": "Interactive JavaScript Fun",
+      "description": "Adding interactivity with JavaScript DOM manipulation.",
+      "link": "#"
+    }
+  ]
